@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body{ margin:0px;
+    z-index: -3;
+    /*background:url(background-image.html.jpeg) fixed;*/
+}
+
+#content_layer{
+    z-index: -10;
+    color: white;
+}
+#vDesktop{
+    z-index: -1;
+	position:fixed;
+	background: url(vDesktop.png) no-repeat 0px 0px;
+	width:100%;
+	height:300px;
+}
+
+#vMeanStack{
+    z-index: -1;
+	position:fixed;
+	background: url(vMeanStack.png) no-repeat;
+	width:100%;
+	height:300px;
+    left: 775px;
+    top: 125px;
+}
+
+#vMongoDb{
+    z-index: -5;
+	position:fixed;
+	background: url(vMongoDb.png) no-repeat 700px 300px;
+	width:100%;
+	height:100%;
+}
+
+#vExpress{
+    z-index: -4;
+	position:fixed;
+	background: url(vExpress.png) no-repeat 810px 500px;
+	width:100%;
+	height:100%;
+}
+
+#vAngularJs{
+    z-index: -3;
+	position:fixed;
+	background: url(vAngularJs.png) no-repeat 810px 650px;
+	width:100%;
+	height:100%;
+}
+
+#vNodeJs{
+    z-index: -2;
+	position:fixed;
+	background: url(vNodeJs2.png) no-repeat 825px 700px;
+	width:100%;
+	height:100%;
+}
+
+
+#content_layer{ position:absolute; }
+</style>
+<script>
+function parallax(){
+	var vDesktop = document.getElementById('vDesktop');
+    var vMongoDb = document.getElementById('vMongoDb');
+	var vExpress = document.getElementById('vExpress');
+    var vAngularJs = document.getElementById('vAngularJs');
+    var vNodeJs = document.getElementById('vNodeJs');
+    // vDesktop.style.top = -(window.pageYOffset * .3)+'px';
+	vMongoDb.style.top = -(window.pageYOffset * .5)+'px';
+    vExpress.style.top = -(window.pageYOffset * .4)+'px';
+    vExpress.style.left = (window.pageYOffset * .145)+'px';
+	vAngularJs.style.top = -(window.pageYOffset * .35)+'px';
+    vAngularJs.style.left = (window.pageYOffset * .16)+'px';    
+    vNodeJs.style.top = -(window.pageYOffset * .33)+'px';
+    vNodeJs.style.left = (window.pageYOffset * .17)+'px';
+}
+window.addEventListener("scroll", parallax, false);
+</script>
+</head>
+<body>
+<div id="vDesktop"></div>
+<div id="vMeanStack"></div>
+<div id="vMongoDb"></div>
+<div id="vExpress"></div>
+<div id="vAngularJs"></div>
+<div id="vNodeJs"></div>
+<div id="content_layer"> <script> for(var i=1; i <50; i++){ document.write('<h1>Jax Test Code '+i+'</h1>'); } </script> </div>
+</body>
+</html>
